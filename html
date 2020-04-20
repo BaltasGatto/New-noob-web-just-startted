@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-05</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a class="logo" href="#">Autoriaus<span> darbai</span></a>
+            <ul>
+                <li>
+                    <a class="active" href="#">Namai</a>
+                </li>
+                <li>
+                    <a href="#">Meniu</a>
+                </li>
+                <li>
+                    <a href="#">Apie mus</a>
+                </li>
+                <li>
+                    <a href="#">Kontaktai</a>
+                </li>
+                <form action="login">
+                    <button class="loginButton">Login</button>
+                    <button class="signupButton">Sign in</button>
+                </form>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="bannerText">
+                <div>
+                    <h2>
+                        Pavadinimas
+                    </h2>
+                    <p>paveiklu galerijos ir paveikslu aprasymas</p>
+                    <a class="active" href="#">Suzinoti daugiau</a>
+                </div>
+
+            </div>
+            <div class="bannerImg" id="sliderShowImg">
+                <img src="New folder (3)/art1.png" class="active" alt="">
+                <img src="New folder (3)/IMGBIN_fan-art-png_2V2XQBc3.png" alt="">
+                <img src="New folder (3)/dd.jpg" alt="">
+
+            </div>
+        </div>
+        <div class="icons">
+            <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+            <ul class="control">
+                <li>
+                    <a href="#" onclick="prevSlide("><i class=""></i></a>
+                    <a href="#" onclick="nextSlide()"><i class="fa ga-angle-right"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var slideShow = document.getElementById('sliderShowImg');
+        var slide = slideShow.getElementsByTagName('img');
+        var index = 0;
+
+        function nextSlide() {
+            slide[index].classList.remove('active');
+            index = (index + 1) % slide.length;
+            slide[index].classList.add('active');
+        }
+
+        function prevSlide() {
+            slide[index].classList.remove('active');
+            index = (index - 1 + side.length) % slide.length;
+            slide[index].classList.add('active');
+        }
+    </script>
+    <footer class="footerBg">
+        <div>
+            <p class="all">© All rights reserved</p>
+
+        </div>
+    </footer>
+</body>
+
+</html>
